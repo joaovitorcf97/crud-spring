@@ -32,6 +32,12 @@ public class CrudSpringApplication {
 			lesson.setCourse(course);
 			course.getLessons().add(lesson);
 
+			Lesson lesson2 = new Lesson();
+			lesson2.setName("Aula 02");
+			lesson2.setYoutubeURL("Nb4uxLxdvxo");
+			lesson2.setCourse(course);
+			course.getLessons().add(lesson2);
+
 			courseRepository.save(course);
 		};
 	}
