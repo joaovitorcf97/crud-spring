@@ -1,7 +1,6 @@
 package com.joao.crudspring.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.node.JsonNodeType;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
