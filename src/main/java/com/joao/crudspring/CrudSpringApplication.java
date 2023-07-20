@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.joao.crudspring.enums.Category;
 import com.joao.crudspring.model.Course;
+import com.joao.crudspring.model.Lesson;
 import com.joao.crudspring.repository.CourseRepository;
 
 @SpringBootApplication
@@ -24,6 +25,13 @@ public class CrudSpringApplication {
 			Course course = new Course();
 			course.setName("Angular");
 			course.setCategory(Category.FRONT_END);
+
+			Lesson lesson = new Lesson();
+			lesson.setName("Introdução");
+			lesson.setYoutubeURL("Nb4uxLxdvxo");
+			lesson.setCourse(course);
+			course.getLessons().add(lesson);
+
 			courseRepository.save(course);
 		};
 	}
